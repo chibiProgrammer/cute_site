@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: db
-  username: postgres
+  host:  <%= ENV['KAWAII_DATABASE_HOST'] %>
+  username: <%= ENV['KAWAII_DATABASE_USER_NAME'] %>
   password: <%= ENV['KAWAII_DATABASE_PASSWORD'] %>
   pool: 5
 
