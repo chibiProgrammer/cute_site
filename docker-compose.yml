@@ -15,7 +15,7 @@ services:
     volumes:
       - .:/kawaii
     ports:
-      - "13000:5000"
+      - "13000:3000"
     depends_on:
       - db
     stdin_open: true
