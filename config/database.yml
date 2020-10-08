@@ -20,6 +20,7 @@ default: &default
   host:  <%= ENV['KAWAII_DATABASE_HOST'] %>
   username: <%= ENV['KAWAII_DATABASE_USER_NAME'] %>
   password: <%= ENV['KAWAII_DATABASE_PASSWORD'] %>
+  port: <%= ENV['KAWAII_DATABASE_PORT']%>
   pool: 5
 
 development:

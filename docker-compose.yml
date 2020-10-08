@@ -1,17 +1,23 @@
 version: '3'
 services:
   db:
-    image: postgres
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: <%= ENV['KAWAII_DATABASE_PASSWORD'] %>
-  web:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    volumes:
-      - .:/kawaii
+    image: mysql:5.7
     ports:
-      - "3000:3000"
-    depends_on:
-      - db
+      - "20001:3306"
+    hostname: "mysql"
+    environment:
+      MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "password"
+    volumes:
+      - ./tmp/docker/mysql:/var/lib/mysql:delegated
+  #   build:
+  #       context: .
+  #       dockerfile: Dockerfile
+  #   command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+  #   volumes:
+  #     - .:/kawaii
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - db
+
