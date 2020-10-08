@@ -15,7 +15,7 @@
 # gem 'pg'
 #
 default: &default
-  adapter: mysql2
+  adapter: postgres
   encoding: utf8mb4
   host:  db
   username: root
@@ -77,6 +77,5 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+production:
+  url: <%= ENV['DATABASE_URL'] %>
