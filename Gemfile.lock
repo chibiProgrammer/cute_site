@@ -225,7 +225,7 @@ DEPENDENCIES
   mysql2
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
-  rails (~> 6.0.3, >= 6.0.3.3)
+  rails (~> 6.0.3)
   ridgepole
   sass-rails (>= 6)
   selenium-webdriver
