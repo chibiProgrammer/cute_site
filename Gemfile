@@ -20,6 +20,10 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'mysql2'
 
+gem 'slim-rails'
+
+gem 'html2slim'
+
 gem 'dotenv-rails'
 
 gem 'ridgepole'
